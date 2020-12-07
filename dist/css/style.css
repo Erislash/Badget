@@ -1,0 +1,326 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#8a0548), to(#036288));
+  background: linear-gradient(left, #8a0548, #036288);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  background-color: #FFF;
+  padding: 1rem 2rem;
+  width: 95%;
+  max-width: 1000px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.6);
+}
+
+.container h2 {
+  font-weight: 100;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.container .myBudget {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+.container .myBudget span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.container .myBudget fieldset {
+  position: relative;
+  border: none;
+  width: 100%;
+  padding: 1rem 1rem 0 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #000;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.container .myBudget fieldset::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  border: 1px solid cadetblue;
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.container .myBudget fieldset.active::before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.container .myBudget fieldset label {
+  position: absolute;
+  pointer-events: none;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  font-size: 1rem;
+  bottom: .3rem;
+  left: 1rem;
+}
+
+.container .myBudget fieldset.active label {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  font-size: .8rem;
+  color: cadetblue;
+}
+
+.container .myBudget fieldset input {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: .3rem .1rem;
+}
+
+.container .myBudget button {
+  width: 100%;
+  max-width: 250px;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+  background-color: #183972;
+  color: #fff;
+  font-size: .8rem;
+  border-radius: 5px;
+  border: 1px solid #183972;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.8);
+}
+
+.container .myBudget button:hover {
+  background-color: #fff;
+  color: #183972;
+}
+
+.container .budgetDash {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .budgetDash > div {
+  width: 45%;
+}
+
+.container .budgetDash > div h3 {
+  text-align: center;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.container .budgetDash .addExpenses .addMessages {
+  display: none;
+  margin-bottom: 1rem;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #26531a;
+  color: #2c5323;
+  background-color: #71eb52;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.container .budgetDash .addExpenses .form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .budgetDash .addExpenses .form fieldset {
+  position: relative;
+  border: none;
+  width: 100%;
+  padding: 1rem 1rem 0 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #000;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.container .budgetDash .addExpenses .form fieldset::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  border: 1px solid cadetblue;
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.container .budgetDash .addExpenses .form fieldset.active::before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.container .budgetDash .addExpenses .form fieldset label {
+  position: absolute;
+  pointer-events: none;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  font-size: 1rem;
+  bottom: .3rem;
+  left: 1rem;
+}
+
+.container .budgetDash .addExpenses .form fieldset.active label {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  font-size: .8rem;
+  color: cadetblue;
+}
+
+.container .budgetDash .addExpenses .form fieldset input {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: .3rem .1rem;
+}
+
+.container .budgetDash .addExpenses .form button {
+  width: 100%;
+  max-width: 250px;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+  background-color: #183972;
+  color: #fff;
+  font-size: .8rem;
+  border-radius: 5px;
+  border: 1px solid #183972;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.8);
+}
+
+.container .budgetDash .addExpenses .form button:hover {
+  background-color: #fff;
+  color: #183972;
+}
+
+.container .budgetDash .currentExpenses {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .budgetDash .currentExpenses .currentExpensesList {
+  margin-bottom: 1rem;
+}
+
+.container .budgetDash .currentExpenses .currentExpensesList li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #000;
+  padding: 1rem 2rem;
+}
+
+.container .budgetDash .currentExpenses .currentExpensesList li .expenseName {
+  text-transform: uppercase;
+}
+
+.container .budgetDash .currentExpenses .currentExpensesList li .price {
+  background-color: #4ba5e0;
+  color: #fff;
+  padding: .4rem;
+  border-radius: 5px;
+}
+
+.container .budgetDash .currentExpenses .currentExpensesList li .remove {
+  text-align: center;
+  vertical-align: middle;
+  color: #c70707;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.container .budgetDash .currentExpenses .currentBudget,
+.container .budgetDash .currentExpenses .currentRemaining {
+  padding: .5rem 1rem;
+  background-color: #b95ead;
+  margin-bottom: 1rem;
+  border: 1px solid #640046;
+  color: #64004e;
+}
+
+.container .budgetDash .currentExpenses .currentBudget {
+  border: 1px solid #071130;
+  color: #0d0730;
+  background-color: #5ea4b9;
+}
+/*# sourceMappingURL=style.css.map */

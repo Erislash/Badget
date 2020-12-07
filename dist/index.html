@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5bf93b33ff.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="app.js"></script>
+    <title>Budget</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Weekly Expenses</h2>
+        <form class="myBudget" id="">
+            <span>$</span>
+            <fieldset class="addField">
+                <label class="" for="">Your Budget</label>
+                <input id="myBudget" type="text">
+            </fieldset>
+        </form>
+        <div class="budgetDash">
+            <div class="addExpenses">
+                <h3>Add Your Expenses Here</h3>
+                <div class="addMessages" id="addMessage">Expense added correctly</div>
+                <form class="form">
+                    <fieldset class="addField">
+                        <label class="" for="">Expense</label>
+                        <input autocomplete="off" id="expense" type="text">
+                    </fieldset>
+                    <fieldset class="addField">
+                        <label class="" for="">Price</label>
+                        <input autocomplete="off" id="amount" type="text">
+                    </fieldset>
+                    <button id="submitForm">Add</button>
+                </form>
+            </div>
+            <div class="currentExpenses">
+                <h3>Current Expenses</h3>
+                <ul id="expensesList" class="currentExpensesList">
+                    <!-- <li>
+                        <div class="expenseName">Transporte</div>
+                        <div class="price">$434.99</div>
+                        <div class="remove"><i class="fas fa-times-circle"></i></div>
+                    </li>
+                    <li>
+                        <div class="expenseName">Cena</div>
+                        <div class="price">$45.99</div>
+                        <div class="remove"><i class="fas fa-times-circle"></i></div>
+                    </li> -->
+                </ul>
+                <div class="currentBudget">Budget: <span id="currentBudget">$0</span></div>
+                <div class="currentRemaining">Remaining: <span id="remainingBudget">$0</span></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
